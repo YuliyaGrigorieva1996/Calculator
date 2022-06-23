@@ -1,0 +1,56 @@
+@import "colors";
+%btn-numbers {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $grey-color;
+    color: $white-color;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+.calc {
+    margin: 100px auto;
+    padding: 18px;
+    width: 300px;
+    height: 430px;
+    background: $black-color;
+    border-radius: 20px;
+    color: $white-color;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px 5px $black-color;
+}
+.buttons {
+    display: grid;
+    grid-template-areas: 
+    "seven eight nine multi"
+    "four five six minus"
+    "one two three plus"
+    "zero point equal divide";
+    justify-items: center;
+    row-gap: 10px;
+}
+.btns {
+    @extend %btn-numbers; 
+}
+.btns:hover {
+    background-color: $grey-hover-color;
+}
+.btns.btns.white-green:hover {
+    background-color: $green-hover-color;
+}
+.btns.green {
+    color: $green-color;
+}
+.btns.white-green {
+    background-color: $green-color;
+}
+.screen {
+    height: 200px;
+    font-size: 40px;
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    padding-top: 10px;
+}
